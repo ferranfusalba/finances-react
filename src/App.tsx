@@ -1,5 +1,15 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
+import Example from "./visx_test/Example";
+
+function Data() {
+  return (
+    <>
+      <p>Data</p>
+      <Example width={375} height={375} />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -9,7 +19,7 @@ function App() {
           <Route path="/" element={<>Home</>} />
           <Route path="/budget" element={<>Budget</>} />
           <Route path="/accounts" element={<>Accounts</>} />
-          <Route path="/data" element={<>Data</>} />
+          <Route path="/data" element={<Data />} />
           <Route path="/settings" element={<>Settings</>} />
         </Routes>
       </main>
