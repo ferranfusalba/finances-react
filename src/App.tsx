@@ -1,13 +1,37 @@
-import './App.scss';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Finances
-        </p>
-      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<>Home</>} />
+          <Route path="/budget" element={<>Budget</>} />
+          <Route path="/accounts" element={<>Accounts</>} />
+          <Route path="/data" element={<>Data</>} />
+          <Route path="/settings" element={<>Settings</>} />
+        </Routes>
+      </main>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/budget">Budget</Link>
+          </li>
+          <li>
+            <Link to="/accounts">Accounts</Link>
+          </li>
+          <li>
+            <Link to="/data">Data</Link>
+          </li>
+          <li>
+            <Link to="/settings">Settings</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

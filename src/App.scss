@@ -1,13 +1,31 @@
 .App {
-  text-align: center;
-  &-header {
+  color: white;
+  height: 100vh;
+  main {
     background-color: var(--secondary);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  }
+  nav {
+    background-color: var(--primary);
+    height: 3.75rem;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      align-items: center;
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
   }
 }
