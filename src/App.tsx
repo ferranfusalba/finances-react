@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
 import Example from "./visx_test/Example";
+import Accounts from "./components/Accounts";
 
 function Data() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<>Home</>} />
           <Route path="/budget" element={<>Budget</>} />
-          <Route path="/accounts" element={<>Accounts</>} />
+          <Route path="/accounts" element={<Accounts />} />
           <Route path="/data" element={<Data />} />
           <Route path="/settings" element={<>Settings</>} />
         </Routes>
