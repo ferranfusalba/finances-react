@@ -3,9 +3,18 @@ import "./App.scss";
 import Data from "./features/Data/pages/Data";
 import Budget from "./features/Budget/pages/Budget";
 import Settings from "./features/Settings/pages/Settings";
-import Accounts from "./features/Accounts/pages/Accounts"
+import Accounts from "./features/Accounts/pages/Accounts";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { initializeUsers } from "./features/core/domain/reducers/coreReducer";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(initializeUsers());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <main>
