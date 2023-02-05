@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
 import Example from "./visx_test/Example";
-import Accounts from "./components/Accounts";
+import Accounts from "./features/Accounts/pages/Accounts"
 
 function Data() {
   return (

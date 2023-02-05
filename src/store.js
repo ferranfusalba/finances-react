@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import noteReducer from "./reducers/noteReducer";
+import accountsReducer from "./features/Accounts/domain/reducers/accountsReducer";
 
 const store = configureStore({
   reducer: {
-    notes: noteReducer,
+    accounts: accountsReducer,
   },
 });
 

@@ -1,31 +1,31 @@
 {
-  "posts": [
+  "accounts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "notes": [
-    {
-      "content": "note 1",
-      "important": true,
-      "id": 1
+      "name": "BBVA",
+      "currency": "EUR",
+      "initialBalance": 0.00,
+      "currentBalance": 1.00,
+      "status": "active",
+      "type": "checking"
     },
     {
-      "content": "note 2",
-      "important": false,
-      "id": 2
+      "id": 2,
+      "name": "Andbank",
+      "currency": "EUR",
+      "initialBalance": 0.00,
+      "currentBalance": 2.00,
+      "status": "active",
+      "type": "savings"
+    },
+    {
+      "id": 3,
+      "name": "Bankinter",
+      "currency": "EUR",
+      "initialBalance": 0.00,
+      "currentBalance": 3.00,
+      "status": "active",
+      "type": "checking"
     }
   ]
 }

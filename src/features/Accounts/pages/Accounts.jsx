@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { initializeNotes } from "../reducers/noteReducer";
+import { initializeAccounts } from "../domain/reducers/accountsReducer";
 
 const Accounts = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(initializeNotes());
+    dispatch(initializeAccounts());
   }, [dispatch]);
 
   return (
