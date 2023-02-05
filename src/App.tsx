@@ -1,16 +1,9 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
-import Example from "./visx_test/Example";
+import Data from "./features/Data/pages/Data";
+import Budget from "./features/Budget/pages/Budget";
+import Settings from "./features/Settings/pages/Settings";
 import Accounts from "./features/Accounts/pages/Accounts"
-
-function Data() {
-  return (
-    <>
-      <p>Data</p>
-      <Example width={375} height={375} />
-    </>
-  );
-}
 
 function App() {
   return (
@@ -18,10 +11,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<>Home</>} />
-          <Route path="/budget" element={<>Budget</>} />
+          <Route path="/budget" element={<Budget />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/data" element={<Data />} />
-          <Route path="/settings" element={<>Settings</>} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
       <nav>
