@@ -1,10 +1,13 @@
 import DataPie from "../ui/DataPie";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 const Data = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <>
       <p>Data</p>
-      <DataPie width={375} height={375} />
+      <DataPie width={width} height={375} />
     </>
   );
 };
