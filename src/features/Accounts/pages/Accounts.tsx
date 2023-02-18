@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { initializeAccounts } from "../domain/reducers/accountsReducer";
-import { Account } from "../../../types/Account"
-import { State } from "../../../types/State"
+import { Account } from "../../../types/Account";
+import { State } from "../../../types/State";
 
 const Accounts = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,9 @@ const Accounts = () => {
 
   useEffect(() => {
     dispatch(initializeAccounts());
+    return () => {
+      console.log("Component unmounted");
+    };
   }, [dispatch]);
 
   return (
