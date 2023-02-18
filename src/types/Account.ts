@@ -5,5 +5,6 @@ export type Account = {
   initialBalance: number;
   name: string;
   status: string;
+  title: string;
   type: string;
 };
