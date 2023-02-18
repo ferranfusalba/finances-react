@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { Account } from "../../../types/Account";
-import { State } from "../../../types/State";
+import { Account } from "../../../types/AccountTypes";
+import { State } from "../../../types/StateTypes";
 import { Link } from "react-router-dom";
 
 const AccountsMenu = () => {
