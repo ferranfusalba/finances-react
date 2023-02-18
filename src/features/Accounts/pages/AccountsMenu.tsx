@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Account } from "../../../types/Account";
 import { State } from "../../../types/State";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AccountsMenu = () => {
   const accounts = useSelector((state: State) => state.accounts);
@@ -19,7 +19,6 @@ const AccountsMenu = () => {
           </div>
         ))}
       </ul>
-      <Outlet />
     </>
   );
 };

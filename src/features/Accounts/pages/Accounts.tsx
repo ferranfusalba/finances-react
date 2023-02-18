@@ -14,7 +14,7 @@ const Accounts = () => {
 
   return (
     <>
-      <p>Accounts</p>
+      <p>Select an account</p>
     </>
   );
 };
