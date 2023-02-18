@@ -23,6 +23,7 @@ const userSlice = createSlice({
   },
 });
 
+// TODO: Replace any
 export const initializeUsers = (): any => {
   return async (dispatch) => {
     const users = await coreService.getAll();

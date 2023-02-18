@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { initializeAccounts } from "../domain/reducers/accountsReducer";
+import { Account } from "../../../types/Account"
+import { State } from "../../../types/State"
 
 const Accounts = () => {
   const dispatch = useDispatch();
-  const accounts = useSelector((state) => state.accounts);
+  const accounts = useSelector((state: State) => state.accounts);
 
   useEffect(() => {
     dispatch(initializeAccounts());
@@ -14,7 +16,7 @@ const Accounts = () => {
     <>
       <p>Accounts</p>
       <ul>
-        {accounts.map((account, index) => (
+        {accounts.map((account: Account, index: number) => (
           <div key={index}>
             <li>{account.name}</li>
           </div>

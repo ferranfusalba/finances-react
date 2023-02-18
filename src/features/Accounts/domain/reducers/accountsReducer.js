@@ -23,7 +23,8 @@ const accountSlice = createSlice({
   },
 });
 
-export const initializeAccounts = () => {
+// TODO: Replace any
+export const initializeAccounts = (): any => {
   return async (dispatch) => {
     const accounts = await accountService.getAll();
     dispatch(setAccounts(accounts));

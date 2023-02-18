@@ -209,6 +209,7 @@ function AnimatedPie<Datum>({
     leave: animate ? fromLeaveTransition : enterUpdateTransition,
     keys: getKey,
   });
+  // TODO: Replace any
   return transitions((props: { startAngle: any; endAngle: any; opacity: any; }, arc: PieArcDatum<Datum>, { key }: any) => {
     const [centroidX, centroidY] = path.centroid(arc);
     const hasSpaceForLabel = arc.endAngle - arc.startAngle >= 0.1;
@@ -219,6 +220,7 @@ function AnimatedPie<Datum>({
           // compute interpolated path d attribute from intermediate angle values
           d={interpolate(
             [props.startAngle, props.endAngle],
+            // TODO: Replace any
             (startAngle: any, endAngle: any) =>
               path({
                 ...arc,
