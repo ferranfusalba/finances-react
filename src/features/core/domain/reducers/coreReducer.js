@@ -5,15 +5,6 @@ const userSlice = createSlice({
   name: "users",
   initialState: [],
   reducers: {
-    toggleImportanceOf(state, action) {
-      const id = action.payload;
-      const userToChange = state.find((n) => n.id === id);
-      const changedUser = {
-        ...userToChange,
-        important: !userToChange.important,
-      };
-      return state.map((user) => (user.id !== id ? user : changedUser));
-    },
     appendUser(state, action) {
       state.push(action.payload);
     },
@@ -38,5 +29,5 @@ export const createUser = (content) => {
   };
 };
 
-export const { toggleImportanceOf, appendUser, setUsers } = userSlice.actions;
+export const { appendUser, setUsers } = userSlice.actions;
 export default userSlice.reducer;
